@@ -6,6 +6,7 @@ package com.zipcodewilmington.person;
 public class Person {
     private String name;
     private int age;
+    private String eyeColor;
 
     public Person() {
         name = "";
@@ -25,6 +26,12 @@ public class Person {
         this.age = age;
     }
 
+    public Person(String name, int age, String eyeColor) {
+        this.name = name;
+        this.age = age;
+        this.eyeColor = eyeColor;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -33,11 +40,19 @@ public class Person {
         this.age = age;
     }
 
+    public void setEyeColor(String eyeColor) {
+        this.eyeColor = eyeColor;
+    }
+
     public String getName() {
         return name;
     }
 
     public Integer getAge() {
         return age;
+    }
+
+    public String getEyeColor() {
+        return eyeColor;
     }
 }

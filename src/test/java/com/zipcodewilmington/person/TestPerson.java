@@ -95,4 +95,23 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testConstructorWithNameAgeEyeColor() {
+        // Given
+        String expectedName = "Leon";
+        int expectedAge = 23;
+        String expectedEyeColor = "green";
+
+        // When
+        Person person = new Person(expectedName, expectedAge, expectedEyeColor);
+
+        // Then
+        String actualName = person.getName();
+        int actualAge = person.getAge();
+        String actualEyeColor = person.getEyeColor();
+        Assert.assertEquals(expectedName, actualName);
+        Assert.assertEquals(expectedAge, actualAge);
+        Assert.assertEquals(expectedEyeColor, actualEyeColor);
+    }
 }
