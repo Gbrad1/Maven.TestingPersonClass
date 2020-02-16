@@ -7,6 +7,8 @@ public class Person {
     private String name;
     private int age;
     private String eyeColor;
+    private boolean zipcoder;
+    private int numberOfCorgisOwned;
 
     public Person() {
         name = "";
@@ -32,6 +34,21 @@ public class Person {
         this.eyeColor = eyeColor;
     }
 
+    public Person(String name, int age, String eyeColor, boolean zipcoderStatus) {
+        this.name = name;
+        this.age = age;
+        this.eyeColor = eyeColor;
+        this.zipcoder = zipcoderStatus;
+    }
+
+    public Person(String name, int age, String eyeColor, boolean zipcoderStatus, int numberOfCorgis) {
+        this.name = name;
+        this.age = age;
+        this.eyeColor = eyeColor;
+        this.zipcoder = zipcoderStatus;
+        this.numberOfCorgisOwned = numberOfCorgis;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -54,5 +71,21 @@ public class Person {
 
     public String getEyeColor() {
         return eyeColor;
+    }
+
+    public void setZipcoder(boolean value) {
+        this.zipcoder = value;
+    }
+
+    public boolean getZipcoder() {
+        return zipcoder;
+    }
+
+    public void setNumberOfCorgis(int newValue) {
+        this.numberOfCorgisOwned = newValue;
+    }
+
+    public int getNumberOfCorgisOwned() {
+        return numberOfCorgisOwned;
     }
 }

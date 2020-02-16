@@ -114,4 +114,53 @@ public class TestPerson {
         Assert.assertEquals(expectedAge, actualAge);
         Assert.assertEquals(expectedEyeColor, actualEyeColor);
     }
+
+    @Test
+    public void testConstructorWithEyeColor() {
+        Person daxter = new Person("Daxter", 5, "green");
+        String expectedEyeColor = "green";
+        String actualEyeColor = daxter.getEyeColor();
+        Assert.assertEquals(expectedEyeColor,actualEyeColor);
+    }
+
+    @Test
+    public void testConstructorIsAZipcoder() {
+        Person jak = new Person("Jak", 25, "blue", true);
+        String expectedName = "Jak";
+        int expectedAge = 25;
+        String expectedEyeColor = "blue";
+
+        String actualName = jak.getName();
+        int actualAge = jak.getAge();
+        String actualEyeColor = jak.getEyeColor();
+
+        Assert.assertEquals(expectedName, actualName);
+        Assert.assertEquals(expectedAge, actualAge);
+        Assert.assertEquals(expectedEyeColor, actualEyeColor);
+        Assert.assertTrue(jak.getZipcoder());
+    }
+
+    @Test
+    public void testSetEyeColor() {
+        Person jak = new Person("Jak", 25, null, true);
+        jak.setEyeColor("blue");
+        String expectedEyeColor = "blue";
+        String actual = jak.getEyeColor();
+        Assert.assertEquals(expectedEyeColor, actual);
+    }
+
+    @Test
+    public void testIfZipCoder() {
+        Person jak = new Person();
+        jak.setZipcoder(true);
+        Assert.assertTrue(jak.getZipcoder());
+    }
+
+    @Test
+    public void setNumberOfCorgisOwned() {
+        Person amanda = new Person();
+        amanda.setNumberOfCorgis(10);
+        int expectedNumberOfCorgis = 10;
+        Assert.assertEquals(expectedNumberOfCorgis, amanda.getNumberOfCorgisOwned());
+    }
 }
