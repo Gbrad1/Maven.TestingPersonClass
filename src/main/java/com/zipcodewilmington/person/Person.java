@@ -9,6 +9,7 @@ public class Person {
     private String eyeColor;
     private boolean zipcoder;
     private int numberOfCorgisOwned;
+    private int numberOfFestivalsAttended;
 
     public Person() {
         name = "";
@@ -49,6 +50,15 @@ public class Person {
         this.numberOfCorgisOwned = numberOfCorgis;
     }
 
+    public Person(String name, int age, String eyeColor, boolean zipcoderStatus, int numberOfCorgis, int festivalsAttended) {
+        this.name = name;
+        this.age = age;
+        this.eyeColor = eyeColor;
+        this.zipcoder = zipcoderStatus;
+        this.numberOfCorgisOwned = numberOfCorgis;
+        this.numberOfFestivalsAttended = festivalsAttended;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -87,5 +97,13 @@ public class Person {
 
     public int getNumberOfCorgisOwned() {
         return numberOfCorgisOwned;
+    }
+
+    public void setNumberOfFestivalsAttended(int newValue) {
+        this.numberOfFestivalsAttended = newValue;
+    }
+
+    public int getNumberOfFestivalsAttended() {
+        return numberOfFestivalsAttended;
     }
 }

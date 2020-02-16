@@ -163,4 +163,20 @@ public class TestPerson {
         int expectedNumberOfCorgis = 10;
         Assert.assertEquals(expectedNumberOfCorgis, amanda.getNumberOfCorgisOwned());
     }
+
+    @Test
+    public void setNumberOfFestivalsAttended() {
+        Person timmy = new Person();
+        timmy.setNumberOfFestivalsAttended(10);
+        int actual = timmy.getNumberOfFestivalsAttended();
+        Assert.assertEquals(10, actual);
+    }
+
+    @Test
+    public void getNumberOfFestivalsAttended() {
+        Person timmy = new Person("Timmy", 21, "green", false, 1, 10);
+        int actual = timmy.getNumberOfFestivalsAttended();
+        Assert.assertEquals(10, actual);
+    }
+
 }
